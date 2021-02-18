@@ -25,6 +25,7 @@ class ProdApp extends StatelessWidget {
       getPages: [
         GetPage(name: '/splashscreen', page: () => SplashScreenMain()),
         GetPage(name: '/loginscreen', page: () => LoginScreen()),
+        GetPage(name: '/containerscreen', page: () => ContainerSceen()),
       ],
     );
   }

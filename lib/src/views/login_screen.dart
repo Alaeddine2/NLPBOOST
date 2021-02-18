@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_signin_button/flutter_signin_button.dart';
 import '../app.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -10,17 +11,20 @@ class _LoginScreenState extends State<LoginScreen> {
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-      appBar: new AppBar(
-      title: new Text("Welcome In SplashScreen Package"),
-      automaticallyImplyLeading: false
-      ),
+      // appBar: new AppBar(
+      // title: new Text("Welcome In SplashScreen Package"),
+      // automaticallyImplyLeading: false
+      // ),
       body: new Center(
-        child: new Text("Done!",
-        style: new TextStyle(
-          fontWeight: FontWeight.bold,
-          fontSize: 30.0
-        ),
-        ),
+        child: new SignInButton(
+          Buttons.Email,
+          mini: true,
+          elevation: 20,
+          text: "Sign up",
+          onPressed: () {
+            Get.toNamed('/containerscreen');
+          },
+        )
       ),
     );
   }
